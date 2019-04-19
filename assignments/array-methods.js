@@ -56,6 +56,10 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
+runners.forEach(function(element) {
+   fullName.push(`${element.first_name} ${element.last_name}`); 
+    
+});
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
@@ -66,6 +70,16 @@ console.log(allCaps);
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
+
+const result = runners.filter(function (element) {
+
+    if(`${element.shirt_size}` ==="L"){
+        return largeShirts.push(`${element.shirt_size} ${element.first_name}` )
+    } else {
+
+    }
+});
+
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
